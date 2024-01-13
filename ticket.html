@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        //gender age, agecon, ladis 50% above 75 free
+        let age=prompt("Enter your AGE");
+        let gender=prompt("Enter gender: Male, Female, Trans-gender");
+      if (age <= 5 && gender==="Female" && age<75 ||age <= 5 && gender==="Trans-gender"|| age <= 5 && gender==="Male" || age >=60 && age<=75){
+            alert("you got 50% off and applied charges are Rs. 50");
+      }else if(gender==="Male" && age >5 && age<60 || gender==="Trans-gender"  && age >5 && age<60){
+        alert("applied charges are Rs. 100");
+      }else if(age > 75 && age < 100 ){
+        alert("yor journey is free");
+      }else if(age>100) {
+        alert(age +"invalid age")
+      }
+     
+        
+     </script>
+</body>
+</html>

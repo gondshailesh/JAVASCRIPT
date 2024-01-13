@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript prompt</title>
+</head>
+<body>
+    <script>
+       "use strict";
+       let num1=prompt("enter number 1");
+       let num2=prompt("enter number 2");
+       let oper=prompt("enter your choice 1-addition, 2-substraction, 3-multiplication, 4-division ,5-remainder");
+       if(oper==1)
+       {
+        document.write("Addition of two numbers is"+(num1+num2));
+        alart("Addition of two numbers is"+ oper);
+       }
+       else if(oper==2)
+       {
+        document.write(" Substraction of two numbers is"+(num1-num2));
+        alart("Substraction of two numbers is"+ oper);
+       }else if(oper==3)
+       {
+        document.write(" Multiplacation of two numbers is"+(num1*num2));
+        alart("Multiplication of two numbers is"+ oper);
+       }else if(oper==4)
+       {
+        document.write("Division of two numbers is"+(num1/num2));
+        alart("remainder of two numbers is"+ oper);
+       }else if(oper==5)
+       {
+        document.write("Division of two numbers is"+(num1%num2));
+        alart("remainder of two numbers is"+ oper);
+       }
+       else (oper>=6)
+       {
+        alert("invalid input");
+       }
+        
+       
+    </script>
+</body>
+</html>

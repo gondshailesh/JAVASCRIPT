@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Redeclaring a Variable Using let</h2>
+
+
+<table border="3" id="data-table">
+    <tr>
+        <th id="tbody">srno</th>
+        <th>name</th>
+        <th>age</th>
+        <th>rollno</th>
+    </tr>
+</table>
+
+<p id="demo"></p>
+
+<script>
+    let data = [
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 },
+    { name: "madhav", age: 20 },
+    { name: "shailesh", age: 20 },
+    // Add more data objects as needed
+];
+// Get a reference to the table body
+let table = document.getElementById("data-table").getElementsByTagName("tbody")[0];
+
+// Loop through the data and create a row for each object
+for (let i = 0; i < data.length; i++) {
+    let row = table.insertRow(i);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    
+    // Populate the cells with data
+    cell1.innerHTML = data[i].name;
+    cell2.innerHTML = data[i].age;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    // Your code to populate the table goes here
+});
+
+
+
+// let z=undefined+1;
+
+// console.log("z",z);
+
+// let student=[
+// {
+//     name:"shailesh",
+//     age:20,
+//     rollno:33
+// },
+// {
+//     name:"mahesh",
+//     age:30,
+//     rollno:23
+// }
+// ]
+// console.log(student);
+
+
+
+// if(x===y)
+// {
+//     console.log("condition true");
+// }
+// else
+// {
+//     console.log("condition not true");
+// }
+
+let a=[1,2];
+let b=[1,2];
+console.log("output",a===b);
+
+</script>
+
+</body>
+</html>

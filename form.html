@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <title>form validation</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="" class="form-control mt-5 bg-warning bg-opacity-25">
+            <center><h4>login form</h4></center>
+            <div class=" pe-2">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <span id="nameerror"></span>
+                    <input type="text"  class="mb-2 col-6  pe-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle" name="name"    value=""    id="name"       placeholder="Enter Email id" onkeypress="return myFunction(this.id,event,this.value)">
+                    </div>
+                        <div class="col-lg-6">
+                            <span id="emailerror"></span>
+                            <input type="email" class="mb-2 col-6  pe-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle" name="email"   value=""   id="email"      placeholder="Enter your password" onkeypress="myFunction()">        
+                        </div>      
+                </div>
+                </form>
+                     <div class=" col-6   ">
+                    <span id="contacterror"></span>
+                    <input type="number"class="mb-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle" name="contact" value="" id="contact"    placeholder="Enter Your contact number" onkeypress="myFunction()">
+                    <span id="addresserror"></span>
+                    <input type="text"  class="mb-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle" name="address"     value=""     id="address"    placeholder="Enter Your Address" onkeypress="myFunction()">
+                    
+                    </div>
+                </div>
+                <div class="d-flex gap-lg-2 pe-2">
+                     <div class=" col-6  pe-2 ">
+                    <span id="studiderror"></span>    
+                    <input type="number"  class="mb-2  form-control-lg form-control-sm form-control border-success-subtle"   name="studid"  value=""  id="studid"     placeholder="Enter Your Student Id" onkeypress="myFunction()">
+                    <span id="fathererror"></span>
+                    <input type="text" class="mb-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle"  name="father"  value=""  id="father"     placeholder="Enter Your Father Name" onkeypress="myFunction()">
+
+                     
+                    </div>
+                    <div class=" col-6   ">
+                    <span id="mothererror"></span>
+                    <input type="text"class="mb-2  form-control-lg form-control-sm form-control border-success-subtle"        name="mother"   value="" id="mother"     placeholder="Enter Your Mother Name" onkeypress="myFunction()">
+                    <span id="adharerror"></span>
+                    <input type="number" class="mb-2 mt-2 form-control-lg form-control-sm form-control border-success-subtle" name="adhar"    value=""  id="adhar"      placeholder="Enter Your Adhar No" onkeypress="myFunction()">
+                    
+                    </div>
+                </div> 
+                <div class="d-flex gap-lg-2 pe-2">
+                    <input type="button" class="btn btn-outline-info  form-control-lg form-control-sm form-control" value="reset" >
+                    <input type="button"  class="form-control btn   form-control-lg form-control-sm form-control btn-outline-primary" value="submit" onclick="formValidation()">
+                </div>
+            </div>
+       
+        
+    </div>
+    <center><span id="successreg"></span></center>
+    
+    
+    
+
+    <script>
+        "use strict";
+
+       
+         function formValidation()
+        {
+        try{
+            let name =document.getElementById('name').value;
+            let email =document.getElementById('email').value;
+            let contact =document.getElementById('contact').value;
+            let address =document.getElementById('address').value;
+            let studid =document.getElementById('studid').value;
+            let father =document.getElementById('father').value;
+            let mother =document.getElementById('mother').value;
+            let adhar =document.getElementById('adhar').value;
+            // alert(name);
+            // alert(email);
+            // alert(contact);
+            // alert(address);
+            // alert(studid);
+            // alert(father);
+            // alert(mother);
+            // alert(adhar);
+            
+
+            if(name== "")
+            {
+                document.getElementById('nameerror').innerHTML="Enter Name correctly";
+                document.getElementById('name').focus();
+                document.getElementById('name').style.border="4px dotted";
+                document.getElementById('name').style.backgroundColor="pink";
+                
+                return false;
+            }else 
+            if (contact == "")
+            {
+                document.getElementById('contacterror').innerHTML="Enter a valid contact";
+                document.getElementById('contact').focus();
+                document.getElementById('contact').style.border="4px dotted";
+                document.getElementById('contact').style.backgroundColor="pink";
+                return false; 
+            }else 
+            if (email == "")
+            {
+                document.getElementById('emailerror').innerHTML="Enter a valid email";
+                document.getElementById('email').focus();
+                document.getElementById('email').style.border="4px dotted";
+                document.getElementById('email').style.backgroundColor="pink";
+                
+                return false;   
+            }else 
+            if (address == "")
+            {
+                document.getElementById('addresserror').innerHTML="Enter a valid address";
+                document.getElementById('address').focus();
+                document.getElementById('address').style.border="4px dotted";
+                document.getElementById('address').style.backgroundColor="pink";
+                return false;   
+            }else 
+            if (studid == "")
+            {
+                document.getElementById('studiderror').innerHTML="Enter a valid studentid";
+                document.getElementById('studid').focus();
+                document.getElementById('studid').style.border="4px dotted";
+                document.getElementById('studid').style.backgroundColor="pink";
+                return false;  
+            }else
+            if (mother == "")
+            {
+                document.getElementById('mothererror').innerHTML="Enter a valid mother name";
+                document.getElementById('mother').focus();
+                document.getElementById('mother').style.border="4px dotted";
+                document.getElementById('mother').style.backgroundColor="pink";
+                return false;   
+            }else 
+             if (father == "")
+            {
+                document.getElementById('fathererror').innerHTML="Enter a valid father name";
+                document.getElementById('father').focus();
+                document.getElementById('father').style.border="4px dotted";
+                document.getElementById('father').style.backgroundColor="pink";
+                return false;    
+            }else 
+            if (adhar == "")
+            {
+                document.getElementById('adharerror').innerHTML="Enter a valid  adhar no";
+                document.getElementById('adhar').focus();
+                document.getElementById('adhar').style.border="4px dotted";
+                document.getElementById('adhar').style.backgroundColor="pink";
+                return false; 
+            }
+            console.log(name);
+            console.log(email);
+            console.log(contact);
+            console.log(adhar);
+            console.log(address);
+            console.log(father);
+            console.log(mother);
+            console.log(studid);
+        }
+       catch(err){
+        alert(err);
+       }
+       }
+
+       function myFunction(id, e ,val) 
+       {
+        let nameregx = /^[A-Za-z_ ]+$/;
+        var keyCode = e.keyCode || e.which;
+        var isNameValid = nameregx.test(String.fromCharCode(keyCode));
+        if(id === "name"  && !isValid  ){
+            return isValid;
+           
+        } i
+
+
+       
+    }
+       
+    </script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
